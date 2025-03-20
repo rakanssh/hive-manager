@@ -4,7 +4,8 @@ if arg[1] == "debug" then
     debug.setEnabled(true)
 end
 local modem = peripheral.find("modem") or error("No modem found", 0)
-
+-- TODO: Replace with dynamic scan for labelled output
+local chest = peripheral.find("minecraft:chest") or error("No chest found", 0)
 local function getHives()
     local remotePeripherals = modem.getNamesRemote()
     local hives = {}
